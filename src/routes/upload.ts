@@ -1,0 +1,15 @@
+import { Router } from 'express';
+import UploadController from '../controllers/UploadController';
+import Protected from '../middlewares/protected';
+import{profilUploads} from '../utils/multer';
+
+const router = Router();
+// Moin
+// This function is used when you use middleware in the router. You need to write the route after this function. If you do not require middleware, you can write the route before this function.
+router.use(Protected);
+// Routes that will automatically check the middleware
+router.put('/images', profilUploads('file'), UploadController.images);
+router.get('/getUploadedImage', UploadController.getUploadedImage);
+router.delete('/deleteProfilePic', UploadController.deleteProfilePic);
+
+export default router;

@@ -1,0 +1,20 @@
+# dependencies
+/node_modules
+#logs
+/logs
+logs/lms.log
+logs/all.log
+logs/error.log
+#ignore config files
+/config/*
+.package-lock.json
+#public folder
+/src/public
+#enviorment
+.env
+#package lock
+package-lock.json
+#history md
+HISTORY.md
+#dist
+/dist
